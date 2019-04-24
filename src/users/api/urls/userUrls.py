@@ -10,3 +10,4 @@ urlpatterns = [
     path('delete/<pk>/', UserDestroyView.as_view()),
     path('<pk>/', UserRetrieveView.as_view())
 ]
+ 
