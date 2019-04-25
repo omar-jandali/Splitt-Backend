@@ -3,29 +3,29 @@ from users.models import Detail
 from rest_framework.generics import ListAPIView, RetrieveAPIView, CreateAPIView
 from rest_framework.generics import DestroyAPIView, UpdateAPIView
 
-from ..serializers import DetailSerializer
+from users.api.serializers import DetailSerializer
 
 
-class UserListView(ListAPIView):
+class DetailListView(ListAPIView):
     queryset = Detail.objects.all()
-    serializer = DetailSerializer
+    serializer_class = DetailSerializer
 
 
-class UserRetrieveView(RetrieveAPIView):
+class DetailRetrieveView(RetrieveAPIView):
     queryset = Detail.objects.all()
-    serializer = DetailSerializer
+    serializer_class = DetailSerializer
 
 
-class UserCreaeteView(CreateAPIView):
+class DetailCreateView(CreateAPIView):
     queryset = Detail.objects.all()
-    serializer = DetailSerializer
+    serializer_class = DetailSerializer
 
 
-class UserDestroyView(DestroyAPIView):
+class DetailDestroyView(DestroyAPIView):
     queryset = Detail.objects.all()
-    serializer = DetailSerializer
+    serializer_class = DetailSerializer
 
 
-class UserUpdateView(UpdateAPIView):
+class DetailUpdateView(UpdateAPIView):
     queryset = Detail.objects.all()
-    serializer = DetailSerializer
+    serializer_class = DetailSerializer
