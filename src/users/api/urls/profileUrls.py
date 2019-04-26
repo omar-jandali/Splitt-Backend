@@ -10,3 +10,9 @@ urlpatterns = [
     path('delete/<pk>/', ProfileDestroyView.as_view()),
     path('<pk>/', ProfileRetrieveView.as_view())
 ]
+
+# api/users/profile/ - done
+# api/users/profile/create
+# api/users/profile/update/pk
+# api/users/profile/delete/pk
+# api/users/profile/pk

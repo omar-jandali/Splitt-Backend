@@ -10,3 +10,9 @@ urlpatterns = [
     path('delete/<pk>/', UserDestroyView.as_view()),
     path('<pk>/', UserRetrieveView.as_view())
 ]
+
+# api/users/ - done
+# api/users/create - done
+# api/users/update/pk - done
+# api/users/delete/pk - done
+# api/users/pk - done

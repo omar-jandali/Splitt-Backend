@@ -11,16 +11,16 @@ class Profile(models.Model):
     )
     synapse = models.CharField(max_length=25, null=True)
     bio = models.TextField(null=True)
-    profile_pic = models.ImageField(upload_to='./users/profile_pics',
-                                    height_field=500,
-                                    width_field=500,
-                                    max_length=150)
+    profile_pic = models.ImageField(
+        upload_to='./profile_pics/',
+        max_length=150
+    )
     facebook = models.URLField(max_length=150)
     twitter = models.URLField(max_length=150)
     updated = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.user.username + self.bio
+        return self.user.username + 'profile'
 
 
 class Detail(models.Model):
