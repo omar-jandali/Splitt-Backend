@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from django.contrib.auth.models import User
 
-from ..models import Profile, Detail
+from ..models import Profile, Detail, Friend
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -46,4 +46,15 @@ class DetailSerializer(serializers.ModelSerializer):
             'state',
             'country',
             'zip_code'
+        )
+
+class FriendSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Friend
+        fields = (
+            'friender',
+            'friended',
+            'status',
+            'blocked',
+            'favorite',
         )

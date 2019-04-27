@@ -55,6 +55,18 @@ class Detail(models.Model):
         default='USA'
     )
     zip_code = USZipCodeField()
+    created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.user.username + self.city
+
+class Friend(models.Model):
+    friender = models.ForeignKey(User, on_delete=models.CASCADE)
+    friended = models.CharField(max_length=50)
+    status = models.SmallIntegerField()
+    blocked = models.BooleanField(default=False)
+    favorite = models.BooleanField(default=False)
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.friender.username + self.friended
