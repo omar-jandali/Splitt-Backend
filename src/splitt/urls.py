@@ -19,5 +19,10 @@ from django.urls import path, include
 urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('admin/', admin.site.urls),
-    path('api/users/', include('users.api.urls.userUrls'))
+    path('api/user/profile/', include('users.api.urls.profileUrls')),
+    path('api/user/detail/', include('users.api.urls.detailUrls')),
+    path('api/user/friend/', include('users.api.urls.friendUrls')),
+    path('api/users/', include('users.api.urls.userUrls')),
+    path('api/group/member/', include('groups.api.urls.memberUrls')),
+    path('api/groups/', include('groups.api.urls.groupUrls'))
 ]

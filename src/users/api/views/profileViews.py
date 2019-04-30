@@ -1,31 +1,31 @@
-from ..models import Profile
+from users.models import Profile
 
 from rest_framework.generics import ListAPIView, RetrieveAPIView, CreateAPIView
 from rest_framework.generics import DestroyAPIView, UpdateAPIView
 
-from ..serializers import ProfileSerializer
+from users.api.serializers import ProfileSerializer
 
 
-class UserListView(ListAPIView):
+class ProfileListView(ListAPIView):
     queryset = Profile.objects.all()
-    serializer = ProfileSerializer
+    serializer_class = ProfileSerializer
 
 
-class UserRetrieveView(RetrieveAPIView):
+class ProfileRetrieveView(RetrieveAPIView):
     queryset = Profile.objects.all()
-    serializer = ProfileSerializer
+    serializer_class = ProfileSerializer
 
 
-class UserCreaeteView(CreateAPIView):
+class ProfileCreateView(CreateAPIView):
     queryset = Profile.objects.all()
-    serializer = ProfileSerializer
+    serializer_class = ProfileSerializer
 
 
-class UserDestroyView(DestroyAPIView):
+class ProfileDestroyView(DestroyAPIView):
     queryset = Profile.objects.all()
-    serializer = ProfileSerializer
+    serializer_class = ProfileSerializer
 
 
-class UserUpdateView(UpdateAPIView):
+class ProfileUpdateView(UpdateAPIView):
     queryset = Profile.objects.all()
-    serializer = ProfileSerializer
+    serializer_class = ProfileSerializer
