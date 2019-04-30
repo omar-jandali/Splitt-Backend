@@ -6,6 +6,7 @@ class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
         fields = (
+            'id',
             'name',
             'description',
             'group_icon',
@@ -18,8 +19,10 @@ class MemberSerializer(serializers.ModelSerializer):
     class Meta:
         model = Member
         fields = (
+            'id',
             'user',
             'group',
             'reference',
-            'balance'
+            'balance',
+            'open_tabs'
         )
