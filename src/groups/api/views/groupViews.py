@@ -1,7 +1,7 @@
 from groups.models import Group
 
-from rest_framework import CreateAPIView, ListAPIView, RetrieveAPIView
-from rest_framework import DestroyAPIView, RetrieveAPIView
+from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView
+from rest_framework.generics import DestroyAPIView, UpdateAPIView
 
 from groups.api.serializers import GroupSerializer
 
