@@ -1,11 +1,11 @@
 from rest_framework import serializers
 
-from ..models import Expense, Itme
+from ..models import Expense, Item
 
 class ExpensesSerializers(serializers.ModelSerializer):
     class Meta:
         model = Expense
-        field(
+        fields = (
             'group',
             'user',
             'location',

@@ -1,8 +1,8 @@
-from expenses.model import Expense
+from expenses.models import Expense
 
-from expense.api.serializers import ExpensesSerializers
+from expenses.api.serializers import ExpensesSerializers
 
-from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView,
+from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView
 from rest_framework.generics import UpdateAPIView, DestroyAPIView
 
 class ExpenseCreateView(CreateAPIView):
