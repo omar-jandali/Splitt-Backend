@@ -1,6 +1,6 @@
-from Transactions.models import Transaction
+from accounts.models import Transaction
 
-from Transactions.api.serializers import TransactionSerializer
+from accounts.api.serializers import TransactionSerializer
 
 from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView
 from rest_framework.generics import DestroyAPIView, UpdateAPIView
