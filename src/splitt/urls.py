@@ -24,5 +24,7 @@ urlpatterns = [
     path('api/user/friend/', include('users.api.urls.friendUrls')),
     path('api/users/', include('users.api.urls.userUrls')),
     path('api/group/member/', include('groups.api.urls.memberUrls')),
-    path('api/groups/', include('groups.api.urls.groupUrls'))
+    path('api/groups/', include('groups.api.urls.groupUrls')),
+    path('api/expense/items/', include('expenses.api.urls.expenseUrls')),
+    path('api/expenses/', include('expenses.api.urls.itemUrls'))
 ]
