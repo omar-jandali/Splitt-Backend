@@ -1,15 +1,22 @@
-from django.urls import path
+from groups.api.views.GroupViews import GroupViewSet
+from rest_framework.routers import DefaultRouter
 
-from groups.api.views.groupViews import GroupCreateView, GroupListView, GroupRetrieveView
-from groups.api.views.groupViews import GroupDestroyView, GroupUpdateView
+router = DefaultRouter()
+router.register(r'', GroupViewSet, base_name='groups')
+urlpatterns = router.urls
 
-urlpatterns = [
-    path('', GroupListView.as_view()),
-    path('create/', GroupCreateView.as_view()),
-    path('update/<pk>/', GroupUpdateView.as_view()),
-    path('destroy/<pk>/', GroupDestroyView.as_view()),
-    path('<pk>/', GroupRetrieveView.as_view())
-]
+# from django.urls import path
+#
+# from groups.api.views.groupViews import GroupCreateView, GroupListView, GroupRetrieveView
+# from groups.api.views.groupViews import GroupDestroyView, GroupUpdateView
+#
+# urlpatterns = [
+#     path('', GroupListView.as_view()),
+#     path('create/', GroupCreateView.as_view()),
+#     path('update/<pk>/', GroupUpdateView.as_view()),
+#     path('destroy/<pk>/', GroupDestroyView.as_view()),
+#     path('<pk>/', GroupRetrieveView.as_view())
+# ]
 
 # api/group/
 # api/group/create
