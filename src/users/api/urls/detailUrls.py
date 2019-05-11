@@ -1,15 +1,22 @@
-from django.urls import path
+from users.api.views.detailViews import DetailViewSet
+from rest_framework.routers import DefaultRouter
 
-from users.api.views.detailViews import DetailListView, DetailRetrieveView, DetailCreateView
-from users.api.views.detailViews import DetailDestroyView, DetailUpdateView
+router = DefaultRouter()
+router.register(r'', DetailViewSet, base_name='detail')
+urlpatterns = router.urls
 
-urlpatterns = [
-    path('', DetailListView.as_view()),
-    path('create/', DetailCreateView.as_view()),
-    path('update/<pk>/', DetailUpdateView.as_view()),
-    path('delete/<pk>/', DetailDestroyView.as_view()),
-    path('<pk>/', DetailRetrieveView.as_view())
-]
+# from django.urls import path
+#
+# from users.api.views.detailViews import DetailListView, DetailRetrieveView, DetailCreateView
+# from users.api.views.detailViews import DetailDestroyView, DetailUpdateView
+#
+# urlpatterns = [
+#     path('', DetailListView.as_view()),
+#     path('create/', DetailCreateView.as_view()),
+#     path('update/<pk>/', DetailUpdateView.as_view()),
+#     path('delete/<pk>/', DetailDestroyView.as_view()),
+#     path('<pk>/', DetailRetrieveView.as_view())
+# ]
 
 # api/users/detail/ - done
 # api/users/detail/create - done

@@ -1,15 +1,22 @@
-from django.urls import path
+from users.api.views.friendViews import FriendViewSet
+from rest_framework.routers import DefaultRouter
 
-from users.api.views.friendViews import FriendListView, FriendRetrieveView, FriendCreateView
-from users.api.views.friendViews import FriendDestroyView, FriendUpdateView
+router = DefaultRouter()
+router.register(r'', FriendViewSet, base_name='friend')
+urlpatterns = router.urls
 
-urlpatterns = [
-    path('', FriendListView.as_view()),
-    path('create/', FriendCreateView.as_view()),
-    path('update/<pk>/', FriendUpdateView.as_view()),
-    path('delete/<pk>/', FriendDestroyView.as_view()),
-    path('<pk>/', FriendRetrieveView.as_view())
-]
+# from django.urls import path
+#
+# from users.api.views.friendViews import FriendListView, FriendRetrieveView, FriendCreateView
+# from users.api.views.friendViews import FriendDestroyView, FriendUpdateView
+#
+# urlpatterns = [
+#     path('', FriendListView.as_view()),
+#     path('create/', FriendCreateView.as_view()),
+#     path('update/<pk>/', FriendUpdateView.as_view()),
+#     path('delete/<pk>/', FriendDestroyView.as_view()),
+#     path('<pk>/', FriendRetrieveView.as_view())
+# ]
 
 # api/users/friend/ - done
 # api/users/friend/create - done
