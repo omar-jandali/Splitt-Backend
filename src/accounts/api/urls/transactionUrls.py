@@ -1,15 +1,22 @@
-from django.urls import path
+from accounts.api.views.transactionView import TransactionViewSet
+from rest_framework.routers import DefaultRouter
 
-from accounts.api.views.transactionView import TransactionCreateView, TransactionListView, TransactionRetrieveView
-from accounts.api.views.transactionView import TransactionDestroyView, TransactionUpdateView
+router = DefaultRouter()
+router.register(r'', TransactionViewSet, base_name='transaction')
+urlpatterns = router.urls
 
-urlpatterns = [
-    path('', TransactionListView.as_view()),
-    path('create/', TransactionCreateView.as_view()),
-    path('update/<pk>/', TransactionUpdateView.as_view()),
-    path('delete/<pk>/', TransactionDestroyView.as_view()),
-    path('<pk>/', TransactionRetrieveView.as_view())
-]
+# from django.urls import path
+#
+# from accounts.api.views.transactionView import TransactionCreateView, TransactionListView, TransactionRetrieveView
+# from accounts.api.views.transactionView import TransactionDestroyView, TransactionUpdateView
+#
+# urlpatterns = [
+#     path('', TransactionListView.as_view()),
+#     path('create/', TransactionCreateView.as_view()),
+#     path('update/<pk>/', TransactionUpdateView.as_view()),
+#     path('delete/<pk>/', TransactionDestroyView.as_view()),
+#     path('<pk>/', TransactionRetrieveView.as_view())
+# ]
 
 # api/account/transaction/
 # api/account/transaction/create
