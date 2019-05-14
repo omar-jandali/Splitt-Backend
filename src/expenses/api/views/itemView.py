@@ -4,6 +4,7 @@ from rest_framework import viewsets
 
 class ItemViewSet(viewsets.ModelViewSet):
     queryset = Item.objects.all()
+    lookup_field = 'expense__reference'
     serializer_class = ItemSerializers
 
 # from expenses.models import Item

@@ -4,6 +4,7 @@ from rest_framework import viewsets
 
 class ProfileViewSet(viewsets.ModelViewSet):
     queryset = Profile.objects.all()
+    lookup_field = 'user__username'
     serializer_class = ProfileSerializer
 
 

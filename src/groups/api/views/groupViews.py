@@ -4,6 +4,7 @@ from rest_framework import viewsets
 
 class GroupViewSet(viewsets.ModelViewSet):
     queryset = Group.objects.all()
+    lookup_field = 'reference'
     serializer_class = GroupSerializer
 
 # from groups.models import Group

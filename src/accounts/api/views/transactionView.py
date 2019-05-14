@@ -4,6 +4,7 @@ from rest_framework import viewsets
 
 class TransactionViewSet(viewsets.ModelViewSet):
     queryset = Transaction.objects.all()
+    lookup_field = 'user_from__username'
     serializer_class = TransactionSerializer
 
 # from accounts.models import Tranaction

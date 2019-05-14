@@ -3,8 +3,10 @@ from ..serializers import MemberSerializer
 from rest_framework import viewsets
 
 class MemberViewSet(viewsets.ModelViewSet):
-    queryset = Member.objects.all()
     serializer_class = MemberSerializer
+    def get_queryset(self):
+        reference = self.kwargs['reference']
+        return Member.objects.filter(group__reference=reference)
 
 # from groups.models import Member
 #

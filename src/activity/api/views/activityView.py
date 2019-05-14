@@ -4,6 +4,7 @@ from rest_framework import viewsets
 
 class ActivityViewSet(viewsets.ModelViewSet):
     queryset = Activity.objects.all()
+    lookup_field = 'user__username'
     serializer_class = ActivitySerializer
 
 # from activity.models import Activity

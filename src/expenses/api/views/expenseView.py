@@ -4,6 +4,7 @@ from rest_framework import viewsets
 
 class ExpenseViewSet(viewsets.ModelViewSet):
     queryset = Expense.objects.all()
+    lookup_field = 'group__reference'
     serializer_class = ExpensesSerializers
 
 # from expenses.models import Expense

@@ -2,7 +2,7 @@ from groups.api.views.memberViews import MemberViewSet
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-router.register(r'', MemberViewSet, base_name='member')
+router.register(r'(?P<reference>[-\w]+)', MemberViewSet, base_name='member')
 urlpatterns = router.urls
 
 # from django.urls import path

@@ -4,6 +4,7 @@ from rest_framework import viewsets
 
 class AccountViewSet(viewsets.ModelViewSet):
     queryset = Account.objects.all()
+    lookup_field = 'user__username'
     serializer_class = AccountSerializer
 
 # from accounts.models import Account

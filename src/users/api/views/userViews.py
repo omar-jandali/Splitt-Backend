@@ -3,8 +3,16 @@ from ..serializers import UserSerializer
 from rest_framework import viewsets
 
 class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
     serializer_class = UserSerializer
+    lookup_field = 'username'
+    queryset = User.objects.all()
+
+    # def get_queryset(self):
+    #     queryset = User.objects.all()
+    #     username = self.request.query_params.get('username', None)
+    #     if username is not None:
+    #         queryset = queryset.filter(username = username)
+    #     return queryset
 
 #
 # from rest_framework.generics import ListAPIView, RetrieveAPIView, CreateAPIView
