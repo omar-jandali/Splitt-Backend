@@ -23,11 +23,17 @@ urlpatterns = [
     path('api/user/detail/', include('users.api.urls.detailUrls')),
     path('api/user/friend/', include('users.api.urls.friendUrls')),
     path('api/users/', include('users.api.urls.userUrls')),
+
     path('api/members/', include('groups.api.urls.memberUrls')),
-    path('api/groups/', include('groups.api.urls.groupUrls')),
+    path('api/group/members/', include('groups.api.urls.groupMemberUrls')),
+    path('api/groups/', include('groups.api.urls.groupsUrls')),
+    path('api/group/', include('groups.api.urls.groupUrls')),
+
     path('api/expense/items/', include('expenses.api.urls.expenseUrls')),
     path('api/expenses/', include('expenses.api.urls.itemUrls')),
+
     path('api/account/transaction/', include('accounts.api.urls.transactionUrls')),
     path('api/accounts/', include('accounts.api.urls.accountUrls')),
+
     path('api/activity/', include('activity.api.urls.activityUrls'))
 ]

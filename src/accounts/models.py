@@ -5,7 +5,7 @@ class Account(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=32)
     bank = models.CharField(max_length=52)
-    type = models.SmallIntegerField(default=1)
+    type = models.SmallIntegerField(default=1) #1 = checking 2 = savings 3 = credit
     amount = models.DecimalField(max_digits=12, decimal_places=2)
     primary = models.BooleanField(default=True)
     acct_ids = models.CharField(max_length=32)
