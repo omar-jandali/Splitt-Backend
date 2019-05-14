@@ -1,4 +1,4 @@
-from groups.api.views.GroupViews import GroupViewSet
+from groups.api.views.groupViews import GroupViewSet
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()

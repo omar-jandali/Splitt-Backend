@@ -1,4 +1,4 @@
-from expenses.models import Account
+from accounts.models import Account
 from ..serializers import AccountSerializer
 from rest_framework import viewsets
 

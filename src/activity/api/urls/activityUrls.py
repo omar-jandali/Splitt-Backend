@@ -1,11 +1,11 @@
-from activty.api.views.ActivityViewSet import ActivityViewSet
+from activity.api.views.activityView import ActivityViewSet
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
 router.register(r'', ActivityViewSet, base_name='activity')
 urlpatterns = router.urls
 
-# from django.urls import 
+# from django.urls import
 #
 # from activity.api.views.activityView import ActivityCreateView, ActivityListView, ActivityRetrieveView
 # from activity.api.views.activityView import ActivityDeleteView, ActivityUpdateView

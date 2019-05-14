@@ -1,4 +1,4 @@
-from groups.models import Expense
+from expenses.models import Expense
 from ..serializers import ExpensesSerializers
 from rest_framework import viewsets
 

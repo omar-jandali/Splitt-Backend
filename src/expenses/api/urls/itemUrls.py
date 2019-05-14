@@ -1,4 +1,4 @@
-from expenses.api.views.ItemView import ItemViewSet
+from expenses.api.views.itemView import ItemViewSet
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
