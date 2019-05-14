@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'users',
     'groups',
     'expenses',
-    'accounts'
+    'accounts',
+    'activity'
 ]
 
 MIDDLEWARE = [

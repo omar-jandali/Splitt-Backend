@@ -1,17 +1,24 @@
-from django.urls import path
+from groups.api.views.memberViews import MemberViewSet
+from rest_framework.routers import DefaultRouter
 
-from groups.api.views.memberViews import MemberCreateView, MemberListView, MemberRetrieveView
-from groups.api.views.memberViews import MemberDestroyView, MemberUpdateView
+router = DefaultRouter()
+router.register(r'', MemberViewSet, base_name='member')
+urlpatterns = router.urls
 
-urlpatterns = [
-    path('', MemberListView.as_view()),
-    path('create/', MemberCreateView.as_view()),
-    path('update/<pk>/', MemberUpdateView.as_view()),
-    path('destroy/<pk>/', MemberDestroyView.as_view()),
-    path('<pk>/', MemberRetrieveView.as_view())
-]
-
-# api/group/member/
+# from django.urls import path
+#
+# from groups.api.views.memberViews import MemberCreateView, MemberListView, MemberRetrieveView
+# from groups.api.views.memberViews import MemberDestroyView, MemberUpdateView
+#
+# urlpatterns = [
+#     path('', MemberListView.as_view()),
+#     path('create/', MemberCreateView.as_view()),
+#     path('update/<pk>/', MemberUpdateView.as_view()),
+#     path('destroy/<pk>/', MemberDestroyView.as_view()),
+#     path('<pk>/', MemberRetrieveView.as_view())
+# ]
+#
+# # api/group/member/
 # api/group/member/create
 # api/group/member/update/pk
 # api/group/member/delete/pk

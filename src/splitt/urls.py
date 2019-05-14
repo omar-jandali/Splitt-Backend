@@ -26,5 +26,8 @@ urlpatterns = [
     path('api/group/member/', include('groups.api.urls.memberUrls')),
     path('api/groups/', include('groups.api.urls.groupUrls')),
     path('api/expense/items/', include('expenses.api.urls.expenseUrls')),
-    path('api/expenses/', include('expenses.api.urls.itemUrls'))
+    path('api/expenses/', include('expenses.api.urls.itemUrls')),
+    path('api/account/transaction/', include('accounts.api.urls.transactionUrls')),
+    path('api/accounts/', include('accounts.api.urls.accountUrls')),
+    path('api/activity/', include('activity.api.urls.activityUrls'))
 ]
