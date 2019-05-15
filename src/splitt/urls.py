@@ -37,5 +37,29 @@ urlpatterns = [
     path('api/account/', include('accounts.api.urls.accountUrls')),
     path('api/accounts/', include('accounts.api.urls.accountsUrls')),
 
-    path('api/activity/', include('activity.api.urls.activityUrls'))
+    path('api/activity/user/', include('activity.api.urls.activityUserUrls')),
+    path('api/activity/group/', include('activity.api.urls.activityGroupUrls'))
 ]
+
+# admin/ => this is a link to the django admin page (managemant)
+# api/user/profile/(username) => returns all profiles or user profile
+# api/user/detail/(username) => returns all details or user details
+# api/user/friend/(username) => returns all friends or user sent friend request
+    # might create two endpoints 1 -> friender 2 => friended
+# api/users/(username) => returns all users or passed in users username
+
+# api/members/<username> => list all of the member objects a user is included in
+# api/group/members/<reference> => grabs all of the members in a group based on group reference
+# api/groups/ => list all of the groups in the database
+# api/groups/<reference> => list grabs a specific group based on the reference
+
+# api/expense/items/<reference> => grabs all of the items related to an expense based on reference
+# api/expenses/ => grabs all of the expenses in the database
+# api/expense/<reference> => grabs an expense based on the reference that is passed
+
+# api/account/transaction/<acct_ids> => this retreives all of the transactions related to an account
+# api/account/<username> => grabs all of the accounts for a singel user based on username
+# api/account/ =>  grabs all of the accounts in the database
+
+# api/activity/user/<username> => Grabs all of the activity based on the users username
+# api/activity/group/<reference> => grabs all of the activity for a group based on reference  
