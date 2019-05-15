@@ -41,7 +41,10 @@ INSTALLED_APPS = [
     'phone_field',
     'localflavor',
     'users',
-    'groups'
+    'groups',
+    'expenses',
+    'accounts',
+    'activity'
 ]
 
 MIDDLEWARE = [

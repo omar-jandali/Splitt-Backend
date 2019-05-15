@@ -17,6 +17,7 @@ class UserSerializer(serializers.ModelSerializer):
             'groups',
             'password'
         )
+        depth=2
 
 
 class ProfileSerializer(serializers.ModelSerializer):
@@ -31,6 +32,7 @@ class ProfileSerializer(serializers.ModelSerializer):
             'facebook',
             'twitter'
         )
+        depth=2
 
 
 class DetailSerializer(serializers.ModelSerializer):
@@ -47,6 +49,8 @@ class DetailSerializer(serializers.ModelSerializer):
             'country',
             'zip_code'
         )
+        depth=2
+
 
 class FriendSerializer(serializers.ModelSerializer):
     class Meta:
@@ -58,3 +62,4 @@ class FriendSerializer(serializers.ModelSerializer):
             'blocked',
             'favorite',
         )
+        depth=2
