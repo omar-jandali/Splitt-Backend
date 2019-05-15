@@ -4,6 +4,7 @@ from rest_framework import viewsets
 
 class FriendViewSet(viewsets.ModelViewSet):
     queryset = Friend.objects.all()
+    lookup_field = 'friended'
     serializer_class = FriendSerializer
 
 # from users.models import Friend
