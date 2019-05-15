@@ -29,11 +29,13 @@ urlpatterns = [
     path('api/groups/', include('groups.api.urls.groupsUrls')),
     path('api/group/', include('groups.api.urls.groupUrls')),
 
-    path('api/expense/items/', include('expenses.api.urls.expenseUrls')),
-    path('api/expenses/', include('expenses.api.urls.itemUrls')),
+    path('api/expense/items/', include('expenses.api.urls.itemUrls')),
+    path('api/expenses/', include('expenses.api.urls.expensesUrls')),
+    path('api/expense/', include('expenses.api.urls.expenseUrls')),
 
-    path('api/account/transaction/', include('accounts.api.urls.transactionUrls')),
-    path('api/accounts/', include('accounts.api.urls.accountUrls')),
+    # path('api/account/transaction/', include('accounts.api.urls.transactionUrls')),
+    # path('api/account/', include('accounts.api.urls.accountUrls')),
+    path('api/accounts/', include('accounts.api.urls.accountsUrls')),
 
     path('api/activity/', include('activity.api.urls.activityUrls'))
 ]

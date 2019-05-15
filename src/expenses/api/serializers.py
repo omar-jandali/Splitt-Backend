@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from ..models import Expense, Item
 
-class ExpensesSerializers(serializers.ModelSerializer):
+class ExpenseSerializers(serializers.ModelSerializer):
     class Meta:
         model = Expense
         fields = (
