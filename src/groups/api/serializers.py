@@ -14,6 +14,7 @@ class GroupSerializer(serializers.ModelSerializer):
             'members',
             'host'
         )
+        depth=2
 
 class MemberSerializer(serializers.ModelSerializer):
     class Meta:
@@ -26,3 +27,4 @@ class MemberSerializer(serializers.ModelSerializer):
             'balance',
             'open_tabs'
         )
+        depth=2

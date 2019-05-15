@@ -62,4 +62,4 @@ urlpatterns = [
 # api/account/ =>  grabs all of the accounts in the database
 
 # api/activity/user/<username> => Grabs all of the activity based on the users username
-# api/activity/group/<reference> => grabs all of the activity for a group based on reference  
+# api/activity/group/<reference> => grabs all of the activity for a group based on reference

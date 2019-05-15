@@ -15,6 +15,7 @@ class ExpenseSerializers(serializers.ModelSerializer):
             'tip',
             'reference'
         )
+        depth=2
 
 class ItemSerializers(serializers.ModelSerializer):
     class Meta:
@@ -29,3 +30,4 @@ class ItemSerializers(serializers.ModelSerializer):
             'verified',
             'reference'
         )
+        depth=2

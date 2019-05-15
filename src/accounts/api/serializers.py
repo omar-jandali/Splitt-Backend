@@ -14,6 +14,7 @@ class AccountSerializer(serializers.ModelSerializer):
             'primary',
             'acct_ids'
         )
+        depth=2
 
 class TransactionSerializer(serializers.ModelSerializer):
     class Meta:
@@ -26,3 +27,4 @@ class TransactionSerializer(serializers.ModelSerializer):
             'amount',
             'description'
         )
+        depth=2

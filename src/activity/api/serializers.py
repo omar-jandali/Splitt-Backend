@@ -20,3 +20,4 @@ class ActivitySerializer(serializers.ModelSerializer):
             'verified',
             'seen'
         )
+        depth=2
